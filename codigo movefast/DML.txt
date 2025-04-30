@@ -1,0 +1,52 @@
+-- CLIENTES 
+INSERT INTO clientes VALUES
+(1000, 'Sofía',    'Ramírez',    34, '2024-01-15 09:30:00', 'Bogotá'),    -- Cliente Sofía Ramírez
+(1001, 'Diego',    'Fernández',  28, '2024-02-10 14:45:00', 'Medellín'), -- Cliente Diego Fernández
+(1002, 'Valentina','González',   41, '2024-03-05 11:20:00', 'Cali'),      -- Cliente Valentina González
+(1003, 'Andrés',   'Herrera',    50, '2023-12-22 08:00:00', 'Bogotá'),    -- Cliente Andrés Herrera
+(1004, 'Camila',   'Díaz',       22, '2024-04-01 16:15:00', 'Medellín'), -- Cliente Camila Díaz
+(1005, 'Gabriel',  'Rojas',      37, '2024-02-28 10:10:00', 'Cali'),      -- Cliente Gabriel Rojas
+(1006, 'Isabella', 'Morales',    29, '2023-11-30 13:50:00', 'Bogotá');   -- Cliente Isabella Morales
+
+-- SUCURSALES 
+INSERT INTO sucursal VALUES
+(1, 'Bogotá',   'Cll 10 #20-40', '3001234567'),  -- Sucursal 1 en Bogotá
+(2, 'Medellín', 'Cra. 50 #15-30', '3107654321'),  -- Sucursal 2 en Medellín
+(3, 'Cali',     'Cll 4C #25-50', '3209876543');  -- Sucursal 3 en Cali
+
+-- VEHÍCULOS 
+INSERT INTO vehiculo VALUES
+('XYZ789', 'Mazda',     2020, 'Blanco', 4, TRUE,  1),  -- Vehículo XYZ789 (Mazda CX-5)
+('LMN456', 'Volkswagen',2018, 'Rojo',   2, TRUE,  1),  -- Vehículo LMN456 (VW Golf)
+('OPQ123', 'Nissan',    2022, 'Negro',  2, FALSE, 2),  -- Vehículo OPQ123 (Nissan Sentra)
+('RST987', 'Subaru',    2019, 'Azul',   4, TRUE,  2),  -- Vehículo RST987 (Subaru Outback)
+('UVW654', 'Jeep',      2017, 'Gris',   2, TRUE,  3);  -- Vehículo UVW654 (Jeep Renegade)
+
+-- ALQUILERES 
+INSERT INTO alquiler VALUES
+( 1, 1000, 'XYZ789', '2025-01-05 10:00:00', '2025-01-10 18:00:00', TRUE),  -- Alquiler activo de Sofía
+( 2, 1001, 'XYZ789', '2025-01-20 09:00:00', '2025-01-25 17:00:00', FALSE),  -- Alquiler de Diego
+( 3, 1002, 'XYZ789', '2025-02-10 08:30:00', '2025-02-15 16:00:00', FALSE),  -- Alquiler de Valentina
+( 4, 1003, 'XYZ789', '2025-03-10 11:00:00', '2025-03-15 15:00:00', FALSE),  -- Alquiler de Andrés
+
+( 5, 1005, 'LMN456', '2025-02-01 09:00:00', '2025-02-07 17:00:00', FALSE),  -- Alquiler de Gabriel
+( 6, 1004, 'LMN456', '2025-04-28 09:00:00', '2025-05-05 18:00:00', TRUE),   -- Alquiler activo de Camila
+
+( 7, 1005, 'RST987', '2025-03-20 08:00:00', '2025-03-25 16:00:00', FALSE), -- Alquiler de Gabriel
+( 8, 1006, 'RST987', '2025-04-30 10:00:00', '2025-05-06 17:00:00', TRUE),  -- Alquiler activo de Isabella
+
+( 9, 1001, 'OPQ123', '2025-02-15 12:00:00', '2025-02-20 14:00:00', FALSE), -- Alquiler de Diego
+(10, 1002, 'UVW654', '2025-04-05 07:00:00', '2025-04-12 12:00:00', FALSE); -- Alquiler de Valentina
+
+-- PAGOS 
+INSERT INTO pago VALUES
+( 1,  1, 150.00), -- Pago por alquiler 1 (Mazda) de Sofía Ramírez
+( 2,  2, 175.50), -- Pago por alquiler 2 (Mazda) de Diego Fernández
+( 3,  3, 200.75), -- Pago por alquiler 3 (Mazda) de Valentina González
+( 4,  4, 180.00), -- Pago por alquiler 4 (Mazda) de Andrés Herrera
+( 5,  5, 220.20), -- Pago por alquiler 5 (Volkswagen) de Gabriel Rojas
+( 6,  6, 330.00), -- Pago por alquiler 6 (Volkswagen) de Camila Díaz
+( 7,  7, 260.00), -- Pago por alquiler 7 (Subaru) de Gabriel Rojas
+( 8,  8, 275.40), -- Pago por alquiler 8 (Subaru) de Isabella Morales
+( 9,  9, 305.60), -- Pago por alquiler 9 (Nissan) de Diego Fernández
+(10, 10, 190.80); -- Pago por alquiler 10 (Jeep) de Valentina González
